@@ -117,6 +117,15 @@ or here:
 
 # Azure Blob storage
 
+![Azure](docs/Azure-1.png "Azure")
+![Azure](docs/Azure-2.png "Azure")
+![Azure](docs/Azure-3.png "Azure")
+![Azure](docs/Azure-4.png "Azure")
+![Azure](docs/Azure-5.png "Azure")
+![Azure](docs/Azure-6.png "Azure")
+![Azure](docs/Azure-7.png "Azure")
+![Azure](docs/Azure-8.png "Azure")
+
 blazor-azure.topswagcode.com
 
 # Google App engine

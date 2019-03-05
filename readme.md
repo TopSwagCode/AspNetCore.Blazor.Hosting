@@ -1,57 +1,38 @@
 # TopSwagCode.Blazor.Hosting
 
-Create simple test app
+So before going to much into details of this post. What is Blazor? Blazor is an experimental .NET web framework using C# and HTML that runs in the browser. If you haven't heard about it before you can go to https://learn-blazor.com/getting-started/about/ and read more about it. This post will be about hosting your Blazor apps.
 
+I decided to create this guide when I saw the documentation on hosting Blazor app's was rather short. You find the official hosting guide here: https://learn-blazor.com/getting-started/static-hosting/
 
-Ratings:
+This guide shortly describes how to host with Nginx in docker. But I love the cloud and I love to being lazy. Hosting my own server with Nginx sounds like a lot of work :P The Guide also shortly mentions Github pages, but doesn't really describe the pain of using it.
 
-AWS
-* Ease of use: 7/10
-* Pricing : 7 / 10
-* Features : 8 / 10
-NO ssl without using Cloudfront.
+I will be focusing on the following 3 Hosting options:
 
+* AWS
+* Azure
+* Github
 
-Github Pages
-* Ease of use: 7/10
-* Pricing : 10 / 10 // Cant beat free :)
-* Features : 5 / 10
-Free and easy SSL.
-
-Azure
-* Ease of use: 4/10 (upload really anoying to create folders manually)
-* Pricing: 7/10
-* Features: 8/10 
-Need to add Azure CDN to get SSL
-
-
-Google
-
-
-Written mini review.
+## Mini review
 
 Ease of use:
-Ease of use is default 7, I found these to be easy to use, but there is always a learning curve if your new to the product. I found azure to be anoying for the way they support uploading of files. I know it is meant to be used from server side code, but still annoys me :)
+I found all 3 to be easy to use, but there is always a learning curve if your new to the product. I found azure to be annoying for the way they support uploading of files with their web interface. I know Azure storage  is meant to be used from server side code, but still annoys me :)
 
 Pricing:
-I found all the offerings to be cheap, without going to deep in their pricings. If you have a site that are visited 5millions times a second, it would be a good idea to make your own research. For personal projects Github pages gets a clear 10/10 with their free hosting.
+I found all the offerings to be cheap, without going to deep in their pricings. If you have a site that is visited 5millions times a second, it would be a good idea to make your own research. For personal projects Github pages gets a clear recommendation with their free hosting.
 
 Features:
 Well they are all pretty similar in their default storage offerings. Easy Website hosting with the exception being Github pages. They support index page and 404 page. But my 404 page cannot be my index page, which is a big problem for Single Page Apps like Blazor. Blazor controlls routing, which means we have to make a ugly hack to redirect 404 to index. This means all reloads redirects to index page. The other offers us to pick which files to serve. This lets us pick both index.html as 404 and index page.
 
-None of the cloud providers supports SSL for their storage directly. You have to use their CDN offering on top. Github pages supports SSL out of the box
+Azure and AWS does not support SSL for their storage directly. You have to use their CDN offering on top. Github pages supports SSL out of the box.
 
 Final Notes:
-To be honest I don't think there is any clear winner. Pick the one you are already using today. If you don't mind a ugly hack and redirects to index after reload pick Github pages. My goto is going to be AWS, since I already have been working alot with it and have my blog hosted on S3 with Cloudfront CDN in front of it. 
+To be honest I don't think there is any clear pick. Pick the one you are already using today. If you don't mind a ugly hack and redirects to index after reload, then pick Github pages. My goto is going to be AWS, since I already have been working alot with it and have my blog hosted on S3 with Cloudfront CDN in front of it. 
 
 Read about how to setup your own hosting on the cloud of your choice here:
 
 * AWS
 * Azure
 * Github Pages
-* Google
-
-
 
 # AWS S3
 
@@ -59,7 +40,7 @@ AWS has S3 storage that can be used to host static sites. Including Blazor apps.
 
 ![S3](docs/S3.png "S3")
 
-Here you will be greated by a wizard for creating the bucket. I will be naming my bucket blazor-aws.topswagcode.com because I am planing on creating http://blazor-aws.topswagcode.com
+Here you will be greated by a wizard for creating the bucket. Before picking a name for your bucket, there is a small gotcha you need to know. The bucket name has to match the intended domain, if you want custom domains afterwards. Eg. topswagcode.com needs bucket name "topswagcode.com" and swag.topswagcode.com need bucket name "swag.topswagcode.com". I will be naming my bucket blazor-aws.topswagcode.com because I am planing on creating http://blazor-aws.topswagcode.com
 
 Click next.
 
@@ -180,4 +161,8 @@ Scroll down to GitHub Pages section and enable it. You can then add a custom dom
 
 Visit my Blazor hosted app on Github here: http://blazor-git.topswagcode.com
 
-# Others
+# Final words
+
+There are plenty of other options out there. I just wanted to share some good options. And if you use AWS S3 with https://aws.amazon.com/cloudfront/ or Azure storage with https://azure.microsoft.com/en-us/services/cdn/ you will have a blazing fast cloud hostet solution that is really cheap! My small blog is currently averaging about 1000 unique views / month and I am paying less than 1 $ for hosting. 
+
+Hope to this helped someone and would love to see what amazing thing you have build with Blazor.

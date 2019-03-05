@@ -109,24 +109,49 @@ Pick "Use this bucket to host a website". Use index.html for both index and erro
 
 ![S3](docs/S3-Hosting-Options.png "S3")
 
-Visit my Blazor app here:    
-[http://blazor-aws.topswagcode.com.s3-website-eu-west-1.amazonaws.com]("http://blazor-aws.topswagcode.com.s3-website-eu-west-1.amazonaws.com")    
-or here:    
+Visit my Blazor hosted app on AWS here:    
 [http://blazor-aws.topswagcode.com/]("http://blazor-aws.topswagcode.com/")
 
 
 # Azure Blob storage
 
+Azure has a storage offering that support hosting of static sites. Just press "Create a resource" and pick "Storage"
+
 ![Azure](docs/Azure-1.png "Azure")
+
+Here you have lot's of options on how you want the storage hosted. I have blured out my subscription and resource group. But simple pick an existing one or create new ones. For instance details I went with the defaults. 
+
 ![Azure](docs/Azure-2.png "Azure")
+
+For "Advanced" options remember to Disable "Secure transfer required", since we will be creating a site on HTTP. If we wanted SSL, we would need to use Azure CDN offering.
+
 ![Azure](docs/Azure-3.png "Azure")
+
+"Tags" and "Review" tab I had nothing to add and quickly just clicked next. 
+
 ![Azure](docs/Azure-4.png "Azure")
+
+When you have created your Storage, you will just have to wait a couple of seconds for Azure to complete. This would be a good time to get some coffee. (Can be slow at times)
+
 ![Azure](docs/Azure-5.png "Azure")
+
+Now we are ready to enable Static website hosting.
+
 ![Azure](docs/Azure-6.png "Azure")
+
+Inset Index.html as both Index and Error doucment.
+
 ![Azure](docs/Azure-7.png "Azure")
+
+When you have saved the changes you will be greated with your new public awailble URL's, but we haven't uploaded anything to the storage. Azure will create a $web folder in your storage where your website should be uploaded.
+
 ![Azure](docs/Azure-8.png "Azure")
 
-blazor-azure.topswagcode.com
+Goto the Storage Explorer and upload your Blazor site to the $web folder. It was midly frustrating uploading the site. Had to create all the folders manually and upload content into them. Might be a better tool for it out there.
+
+![Azure](docs/Azure-9.png "Azure")
+
+Visit my Blazor hosted app on Azure here: [blazor-azure.topswagcode.com]("http://blazor-azure.topswagcode.com)
 
 # Google App engine
 
@@ -154,5 +179,6 @@ Scroll down to GitHub Pages section and enable it. You can then add a custom dom
 
 ![Github](docs/Github-Hosting.png "Github")
 
+Visit my Blazor hosted app on Github here: [blazor-git.topswagcode.com]("http://blazor-git.topswagcode.com)
 
 # Others

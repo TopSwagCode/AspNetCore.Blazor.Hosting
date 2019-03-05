@@ -109,7 +109,7 @@ Pick "Use this bucket to host a website". Use index.html for both index and erro
 
 ![S3](docs/S3-Hosting-Options.png "S3")
 
-Visit my Blazor hosted app on AWS here: [http://blazor-aws.topswagcode.com/]("http://blazor-aws.topswagcode.com/")
+Visit my Blazor hosted app on AWS here: http://blazor-aws.topswagcode.com/
 
 
 # Azure Blob storage
@@ -150,7 +150,7 @@ Goto the Storage Explorer and upload your Blazor site to the $web folder. It was
 
 ![Azure](docs/Azure-9.png "Azure")
 
-Visit my Blazor hosted app on Azure here: [blazor-azure.topswagcode.com]("http://blazor-azure.topswagcode.com")
+Visit my Blazor hosted app on Azure here: http://blazor-azure.topswagcode.com
 
 # Google App engine
 
@@ -178,6 +178,6 @@ Scroll down to GitHub Pages section and enable it. You can then add a custom dom
 
 ![Github](docs/Github-Hosting.png "Github")
 
-Visit my Blazor hosted app on Github here: [blazor-git.topswagcode.com]("http://blazor-git.topswagcode.com")
+Visit my Blazor hosted app on Github here: http://blazor-git.topswagcode.com
 
 # Others

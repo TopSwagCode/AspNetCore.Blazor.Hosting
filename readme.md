@@ -14,18 +14,18 @@ I will be focusing on the following 3 Hosting options:
 
 ## Mini review
 
-Ease of use:
+Ease of use:    
 I found all 3 to be easy to use, but there is always a learning curve if your new to the product. I found azure to be annoying for the way they support uploading of files with their web interface. I know Azure storage  is meant to be used from server side code, but still annoys me :)
 
-Pricing:
+Pricing:     
 I found all the offerings to be cheap, without going to deep in their pricings. If you have a site that is visited 5millions times a second, it would be a good idea to make your own research. For personal projects Github pages gets a clear recommendation with their free hosting.
 
-Features:
+Features:     
 Well they are all pretty similar in their default storage offerings. Easy Website hosting with the exception being Github pages. They support index page and 404 page. But my 404 page cannot be my index page, which is a big problem for Single Page Apps like Blazor. Blazor controlls routing, which means we have to make a ugly hack to redirect 404 to index. This means all reloads redirects to index page. The other offers us to pick which files to serve. This lets us pick both index.html as 404 and index page.
 
 Azure and AWS does not support SSL for their storage directly. You have to use their CDN offering on top. Github pages supports SSL out of the box.
 
-Final Notes:
+Notes:     
 To be honest I don't think there is any clear pick. Pick the one you are already using today. If you don't mind a ugly hack and redirects to index after reload, then pick Github pages. My goto is going to be AWS, since I already have been working alot with it and have my blog hosted on S3 with Cloudfront CDN in front of it. 
 
 Read about how to setup your own hosting on the cloud of your choice here:
@@ -132,11 +132,6 @@ Goto the Storage Explorer and upload your Blazor site to the $web folder. It was
 ![Azure](docs/Azure-9.png "Azure")
 
 Visit my Blazor hosted app on Azure here: http://blazor-azure.topswagcode.com
-
-# Google App engine
-
-blazor-gae.topswagcode.com
-https://cloud.google.com/storage/docs/hosting-static-website
 
 
 # Github pages

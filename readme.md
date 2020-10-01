@@ -1,4 +1,4 @@
-# TopSwagCode.Blazor.Hosting
+# AspNetCore.Blazor.Hosting
 
 So before going to much into details of this post. What is Blazor? Blazor is an experimental .NET web framework using C# and HTML that runs in the browser. If you haven't heard about it before you can go to https://learn-blazor.com/getting-started/about/ and read more about it. This post will be about hosting your Blazor apps.
 
